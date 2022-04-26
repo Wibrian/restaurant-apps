@@ -1,0 +1,66 @@
+$main-color: #f1ddbf;
+$main-text-color: #525e75;
+$hover-color: lightcyan;
+
+app-navbar {
+	color: $main-text-color;
+	padding: 1.3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	align-content: center;
+	flex-direction: row;
+	background-color: $main-color;
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.navbar-icon {
+	display: none;
+	color: $main-text-color;
+	font-size: 30px;
+	background: none;
+	border: none;
+	padding: 0.8rem;
+	cursor: pointer;
+}
+
+.navbar-icon:hover {
+	color: $hover-color;
+	transition: 0.2s;
+}
+
+.navbar-title {
+	margin: 0 50px 0 50px;
+}
+
+.navbar-list {
+	font-size: 20px;
+	margin: 0 50px 0 50px;
+}
+
+ul {
+	padding-inline-start: 0px;
+	list-style-type: none;
+}
+
+.navbar-list li {
+	display: inline;
+}
+
+.navbar-list a {
+	padding: 1.3rem;
+	color: $main-text-color;
+	text-decoration: none;
+	padding: 0.8rem;
+}
+
+.navbar-list a:hover {
+	color: $hover-color;
+	transition: 0.2s;
+}

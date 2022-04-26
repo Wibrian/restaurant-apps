@@ -1,0 +1,76 @@
+$main-color: #f1ddbf;
+$main-text-color: #525e75;
+$main-text-color-2: #323946;
+$main-text-color-3: #dac098;
+
+section {
+	padding: 0px 20px 20px 20px;
+}
+
+.description p {
+	margin-top: 1rem;
+}
+
+.description h4 {
+	margin-top: 1rem;
+	font-size: 23px;
+}
+
+restaurant-card {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	transition: 0.3s;
+}
+
+restaurant-favourite {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+restaurant-list {
+	margin: 1.5rem;
+	width: 340px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35);
+	color: $main-text-color-2;
+	transition: 1s;
+}
+
+.description p {
+	overflow: hidden;
+	text-overflow: clip;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+
+.card-image {
+	position: relative;
+}
+
+.card-image img {
+	height: 270px;
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+
+.card-image p {
+	position: absolute;
+	top: 10px;
+	background-color: $main-color;
+	padding: 1rem;
+}
+
+.cta {
+	color: $main-text-color;
+	text-decoration: none;
+	transition: 0.2s;
+	padding: 0.8rem 0.8rem 0.8rem 0;
+}
+
+.cta:hover {
+	color: $main-text-color-3;
+}

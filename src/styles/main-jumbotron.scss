@@ -1,0 +1,48 @@
+$color-white: #ffffff;
+$main-color: #f1ddbf;
+$main-text-color: #525e75;
+
+.jumbotron {
+	position: relative;
+}
+
+.center-title {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: $color-white;
+	text-shadow: 0 0 10px black;
+	font-weight: 400;
+	font-size: 50px;
+	background-color: rgba(66, 66, 66, 0.1);
+	backdrop-filter: blur(3px);
+}
+
+.center-title-2 {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
+	font-size: 30px;
+	color: $main-text-color;
+}
+
+.center-subtitle {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $color-white;
+	text-shadow: 0 0 4px black;
+	font-size: 20px;
+	text-align: center;
+	width: 90%;
+}
+
+.hero-image {
+	max-height: 600px;
+	object-fit: cover;
+	width: 100%;
+}

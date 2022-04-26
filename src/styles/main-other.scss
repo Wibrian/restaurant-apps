@@ -1,0 +1,57 @@
+error-message {
+	margin: 2rem;
+	text-align: center;
+}
+
+.skip-content {
+	height: 30px;
+	top: 90px;
+	left: 0;
+	padding: 15.5px 10px 10px 10px;
+	position: absolute;
+	transform: translate(-700px);
+	transition: transform 0.3s;
+	color: $main-text-color;
+	text-decoration: none;
+	text-align: center;
+	background: $main-color;
+}
+
+.skip-content:focus {
+	transform: translateY(0);
+}
+
+.yellow {
+	color: yellow;
+}
+
+.white {
+	color: white;
+}
+
+.red {
+	color: rgb(254, 65, 65);
+}
+
+.main-color {
+	padding-right: 10px;
+	color: $main-color;
+}
+
+.main-text-color {
+	padding-right: 10px;
+	color: $main-text-color;
+}
+
+.main-text-color-2 {
+	color: $main-text-color;
+}
+
+.center {
+	text-align: center;
+	font-size: 30px;
+}
+
+.center h3 {
+	color: $main-text-color;
+}

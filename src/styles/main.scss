@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+@import './main-loading.scss';
+@import './main-like-button.scss';
+@import './main-detail.scss';
+@import './main-responsive.scss';
+@import './main-navbar.scss';
+@import './main-jumbotron.scss';
+@import './main-card.scss';
+@import './main-other.scss';
+
+$main-color: #f1ddbf;
+$main-text-color: #525e75;
+$font-style: 'Source Sans Pro', sans-serif;
+
+* {
+	font-family: $font-style;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #525e7598;
+	border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: $main-text-color;
+	transition: 2s;
+}
+
+body {
+	display: flex;
+    flex-direction: column;
+}
+
+footer {
+	text-align: center;
+	background-color: $main-color;
+	color: $main-text-color;
+	font-weight: bold;
+	padding: 1rem;
+	margin-top: 2rem;
+}
+
+

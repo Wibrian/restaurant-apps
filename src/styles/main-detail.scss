@@ -1,0 +1,132 @@
+$color-white: #ffffff;
+$main-color: #f1ddbf;
+$main-text-color: #525e75;
+$hover-color: lightcyan;
+
+restaurant-detail {
+    margin: 0 5em 0 5em;
+    display: flex;
+    flex-flow: row;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    transition: 1s;
+    padding: 1rem;
+}
+
+.detail {
+    flex-shrink: 3;
+}
+
+.detail p {
+    padding-bottom: 0.5rem;
+}
+
+.detail ul {
+    padding-left: 1.8rem;  
+    list-style-position: inside;
+}
+
+.detail ul li {
+    list-style-type: circle;
+}
+
+.detail-title {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.detail-title h4 {
+    margin: 0 0 0 0;
+    font-size: 40px;
+    color: $main-text-color;
+}
+
+.image {
+    position: relative;
+}
+
+.image div {
+    position: absolute;
+    background-color: $main-color;
+    padding: 1.5rem;
+    top: 3%;
+    right: 0;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35);
+}
+
+.review-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 600px;
+    overflow: auto;
+}
+
+.review-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.review-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.review-container::-webkit-scrollbar-thumb {
+    background: $main-color;
+}
+
+.review {
+    margin: 1rem;
+    flex: 0 0 auto;
+    width: 270px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35);
+    
+}
+
+.review p {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.review-name {
+    display: flex;
+    align-items: center;
+    background-color: $main-color;
+    color: $main-text-color;
+}
+
+.date {
+    font-size: 12px;
+}
+
+.desc {
+    margin-top: 1rem;
+}
+
+.menu-description {
+    padding-left: 1.8rem;
+    overflow: hidden;
+    height: 95px;
+}
+
+.menu-description::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.menu-description::-webkit-scrollbar-thumb {
+	background-color: $main-color;
+}
+
+.menu-description:hover {
+	overflow: auto;
+}
