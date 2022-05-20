@@ -1,4 +1,4 @@
-import FETCH_API_RESTO from './globals/fetch-api'
+import FETCH_API_RESTO from '../globals/fetch-api'
 
 class RestoApiSource {
   static async getResto () {

@@ -1,5 +1,7 @@
 import FavouriteRestoIdb from '../database/favourite-resto-db'
-import { createResto } from '../resto-template'
+import { createResto } from './resto-template'
+import 'lazysizes'
+import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 
 const favoriteRestoPage = {
   async render () {
@@ -20,11 +22,16 @@ const favoriteRestoPage = {
     const restoMain = document.querySelector('main')
     const restoFavourite = document.createElement('restaurant-favourite')
     restoMain.append(restoFavourite)
-    resto.forEach((resto) => {
-      const restoList = document.createElement('restaurant-list')
-      restoFavourite.append(restoList)
-      restoList.innerHTML += createResto(resto)
-    })
+    if (resto.length === 0) {
+      const restoNotFound = document.createElement('no-favourite')
+      restoFavourite.append(restoNotFound)
+    } else {
+      resto.forEach((resto) => {
+        const restoList = document.createElement('restaurant-list')
+        restoFavourite.append(restoList)
+        restoList.innerHTML += createResto(resto)
+      })
+    }
   }
 }
 

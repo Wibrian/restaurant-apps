@@ -1,9 +1,6 @@
 class RestoCard extends HTMLElement {}
-
 class RestoList extends HTMLElement {}
-
 class RestoFavorite extends HTMLElement {}
-
 class RestoDetail extends HTMLElement {}
 
 class AppBar extends HTMLElement {
@@ -79,6 +76,18 @@ class ErrorMessage extends HTMLElement {
   }
 }
 
+class RestoFavoriteNotFound extends HTMLElement {
+  connectedCallback () {
+    this.render()
+  }
+
+  render () {
+    this.innerHTML = `
+      <h4 class="no-favourite-title">Anda Belum Memiliki Restoran Favorit</h4>
+    `
+  }
+}
+
 customElements.define('hero-jumbotron', HeroJumbotron)
 customElements.define('app-navbar', AppBar)
 customElements.define('loading-page', LoadingPage)
@@ -87,3 +96,4 @@ customElements.define('restaurant-detail', RestoDetail)
 customElements.define('restaurant-card', RestoCard)
 customElements.define('restaurant-list', RestoList)
 customElements.define('restaurant-favourite', RestoFavorite)
+customElements.define('no-favourite', RestoFavoriteNotFound)

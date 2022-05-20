@@ -1,7 +1,10 @@
 import UrlParser from '../routes/url-parser'
-import RestoApiSource from '../resto-source'
-import { createDetailResto } from '../resto-template'
+import RestoApiSource from '..//database/resto-source'
+import { createDetailResto } from './resto-template'
 import LikeButtonInitiator from '../utils/like-button'
+import FavouriteRestoIdb from '../database/favourite-resto-db'
+import 'lazysizes'
+import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 
 const detailResto = {
   async render () {
@@ -27,6 +30,7 @@ const detailResto = {
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButton'),
+      favouriteRestaurant: FavouriteRestoIdb,
       restaurants: {
         id: resto.id,
         name: resto.name,

@@ -1,6 +1,8 @@
-import RestoApiSource from '../resto-source'
-import { createResto } from '../resto-template'
+import RestoApiSource from '../database/resto-source'
+import { createResto } from './resto-template'
 import '../utils/custom-element'
+import 'lazysizes'
+import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 
 const myResto = {
   async render () {

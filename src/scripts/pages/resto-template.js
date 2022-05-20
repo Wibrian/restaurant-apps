@@ -1,20 +1,20 @@
-import CONFIG from './globals/config'
+import CONFIG from '../globals/config'
 
 const createResto = (resto) => `
         <div class="card-image">
-            <img src="${CONFIG.BASE_IMAGE_LARGE}${resto.pictureId}" alt="Gambar resotan di Kota, ${resto.city}" />
+            <img class="lazyload" src="${CONFIG.BASE_IMAGE_SMALL}${resto.pictureId}" alt="Gambar resotan di Kota, ${resto.city}" />
             <p>Kota, <strong>${resto.city}</strong></p>
         </div>
         <section class="description">
             <p><b>Rating:</b> <i class="fa-solid fa-star yellow"></i> ${resto.rating}</p>
-            <h4 tabindex="0"><a class="cta" href="#/detail/${resto.id}">${resto.name}</a></h4>
+            <h4 class="my-resto-title" tabindex="0"><a class="cta" href="#/detail/${resto.id}">${resto.name}</a></h4>
             <p>${resto.description}</p>
         </section>
 `
 
 const createDetailResto = (resto) => `
         <div class="image">
-            <img src="${CONFIG.BASE_IMAGE_LARGE}${resto.pictureId}" alt="Gambar detail resto Kota ${resto.city}">
+            <img class="lazyload" src="${CONFIG.BASE_IMAGE_LARGE}${resto.pictureId}" alt="Gambar detail resto Kota ${resto.city}">
             <div>Kota, <strong>${resto.city}</strong></div>
         </div>
         <div class="detail">
@@ -55,7 +55,7 @@ const createLikeButton = () => `
 `
 
 const createLikedButton = () => `
-    <button id="like-button" class="like-button" aria-label="like this restaurant"><i class="fa-solid fa-heart red" aria-hidden="true"></i></button>
+    <button id="like-button" class="like-button" aria-label="unlike this restaurant"><i class="fa-solid fa-heart red" aria-hidden="true"></i></button>
 `
 
 export { createResto, createDetailResto, createLikeButton, createLikedButton }
