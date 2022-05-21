@@ -22,7 +22,6 @@ Scenario('Favourite one Restaurant', async ({ I }) => {
 
   const firstRestaurant = locate('.my-resto-title a').first()
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant)
-  I.wait(1)
   I.click(firstRestaurant)
 
   I.wait(3)
@@ -52,7 +51,6 @@ Scenario('Unfavourite one Restaurant', async ({ I }) => {
 
   const firstRestaurant = locate('.my-resto-title a').first()
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant)
-  I.wait(1)
   I.click(firstRestaurant)
 
   I.wait(3)
