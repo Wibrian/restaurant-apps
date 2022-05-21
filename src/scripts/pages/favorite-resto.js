@@ -6,11 +6,7 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 const favoriteRestoPage = {
   async render () {
     return `
-        <div class="jumbotron">
-            <img class="hero-image" src="./images/heros/hero-image_2.jpg" alt="Gambar orang dengan hidangan makanan" />
-            <h2 class="center-title" tabindex="0">Welcome to Hunger Apps</h2>
-            <p class="center-subtitle">Bingung cari resotran? Coba cari disini..</p>
-        </div>
+        <hero-jumbotron></hero-jumbotron>
         <h3 class="center-title-2" id="content" tabindex="0">Favorite Restaurant</h3>
         <loading-page></loading-page>
       `

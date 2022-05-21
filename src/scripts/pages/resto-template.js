@@ -2,7 +2,7 @@ import CONFIG from '../globals/config'
 
 const createResto = (resto) => `
         <div class="card-image">
-            <img class="lazyload" src="${CONFIG.BASE_IMAGE_SMALL}${resto.pictureId}" alt="Gambar resotan di Kota, ${resto.city}" />
+            <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_MEDIUM}${resto.pictureId}" alt="Gambar resotan di Kota, ${resto.city}" />
             <p>Kota, <strong>${resto.city}</strong></p>
         </div>
         <section class="description">
@@ -14,7 +14,7 @@ const createResto = (resto) => `
 
 const createDetailResto = (resto) => `
         <div class="image">
-            <img class="lazyload" src="${CONFIG.BASE_IMAGE_LARGE}${resto.pictureId}" alt="Gambar detail resto Kota ${resto.city}">
+            <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_LARGE}${resto.pictureId}" alt="Gambar detail resto Kota ${resto.city}">
             <div>Kota, <strong>${resto.city}</strong></div>
         </div>
         <div class="detail">
