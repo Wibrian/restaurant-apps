@@ -8,7 +8,8 @@ const favoriteRestoPage = {
     return `
         <hero-jumbotron></hero-jumbotron>
         <h3 class="center-title-2" id="content" tabindex="0">Favorite Restaurant</h3>
-        <loading-page></loading-page>
+        <loading-skeleton></loading-skeleton>
+        <restaurant-card></restaurant-card>
       `
   },
 
@@ -17,6 +18,7 @@ const favoriteRestoPage = {
     console.log(resto)
     const restoMain = document.querySelector('main')
     const restoFavourite = document.createElement('restaurant-favourite')
+    restoFavourite.setAttribute('class', 'none')
     restoMain.append(restoFavourite)
     if (resto.length === 0) {
       const restoNotFound = document.createElement('no-favourite')

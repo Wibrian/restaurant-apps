@@ -37,7 +37,7 @@ class HeroJumbotron extends HTMLElement {
       <div class="jumbotron">
         <picture>
           <source media="(max-width: 716px)" srcset="./images/heros/hero-image_2-small.jpg" />
-          <img class="hero-image" src="./images/heros/hero-image_2-large.jpg" alt="Gambar orang dengan hidangan makanan" />
+          <img class="hero-image" src="./images/heros/hero-image_2.jpg" alt="Gambar orang dengan hidangan makanan" />
         </picture>
         <h2 class="center-title" tabindex="0">Welcome to Hunger Apps</h2>
         <p class="center-subtitle">Bingung cari resotran? Coba cari disini..</p>
@@ -46,14 +46,46 @@ class HeroJumbotron extends HTMLElement {
   }
 }
 
-class LoadingPage extends HTMLElement {
+class LoadingSkeleton extends HTMLElement {
   connectedCallback () {
     this.render()
   }
 
   render () {
     this.innerHTML = `
-      <div class="loading-bar"><div></div><div></div><div></div></div>
+      <div class="skeleton-container">
+        <div class="card-image skeleton">
+            <img class="lazyload" data-src="" alt="" />
+            <p>Kota, <strong></strong></p>
+        </div>
+        <section class="description skeleton">
+            <p><b>Rating:</b> <i class="fa-solid fa-star yellow"></i></p>
+            <h4 class="my-resto-title" tabindex="0"><a class="cta" href="#"></a></h4>
+            <p>onload</p>
+        </section>
+      </div>
+      <div class="skeleton-container">
+        <div class="card-image skeleton">
+            <img class="lazyload" data-src="" alt="" />
+            <p>Kota, <strong></strong></p>
+        </div>
+        <section class="description skeleton">
+            <p><b>Rating:</b> <i class="fa-solid fa-star yellow"></i></p>
+            <h4 class="my-resto-title" tabindex="0"><a class="cta" href="#"></a></h4>
+            <p>onload</p>
+        </section>
+      </div>
+      <div class="skeleton-container">
+        <div class="card-image skeleton">
+            <img class="lazyload" data-src="" alt="" />
+            <p>Kota, <strong></strong></p>
+        </div>
+        <section class="description skeleton">
+            <p><b>Rating:</b> <i class="fa-solid fa-star yellow"></i></p>
+            <h4 class="my-resto-title" tabindex="0"><a class="cta" href="#"></a></h4>
+            <p>onload</p>
+        </section>
+      </div>
     `
   }
 }
@@ -93,7 +125,7 @@ class RestoFavoriteNotFound extends HTMLElement {
 
 customElements.define('hero-jumbotron', HeroJumbotron)
 customElements.define('app-navbar', AppBar)
-customElements.define('loading-page', LoadingPage)
+customElements.define('loading-skeleton', LoadingSkeleton)
 customElements.define('error-message', ErrorMessage)
 customElements.define('restaurant-detail', RestoDetail)
 customElements.define('restaurant-card', RestoCard)

@@ -9,7 +9,7 @@ const myResto = {
     return `
     <hero-jumbotron></hero-jumbotron>
     <h3 class="center-title-2" id="content" tabindex="0">Explore Restaurant</h3>
-    <loading-page></loading-page>
+    <loading-skeleton></loading-skeleton>
     `
   },
 
@@ -17,6 +17,7 @@ const myResto = {
     const restoApi = await RestoApiSource.getResto()
     const restoMain = document.querySelector('main')
     const restoCard = document.createElement('restaurant-card')
+    restoCard.setAttribute('class', 'none')
     restoMain.append(restoCard)
     restoApi.forEach((resto) => {
       const restoList = document.createElement('restaurant-list')

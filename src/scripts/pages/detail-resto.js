@@ -11,7 +11,6 @@ const detailResto = {
     return `
         <hero-jumbotron></hero-jumbotron>
         <h3 class="center-title-2" id="content" tabindex="0">Detail Restaurant</h3>
-        <loading-page></loading-page>
       `
   },
 

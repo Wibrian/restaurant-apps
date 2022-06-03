@@ -10,7 +10,6 @@ class App {
     this._content = content
 
     this._initialAppShell()
-    this._loading()
     this._afterLoading()
   }
 
@@ -22,20 +21,19 @@ class App {
     })
   }
 
-  _loading () {
-    document.querySelector('loading-page').removeAttribute('class')
-    document.querySelector('loading-page div').classList.add('loading-bar')
-  }
-
   _afterLoading () {
     setTimeout(() => {
-      document.querySelector('loading-page').classList.add('none')
-      document.querySelector('loading-page div').removeAttribute('class')
-    }, 1200)
+      try {
+        document.querySelector('loading-skeleton').classList.add('none')
+        document.querySelector('restaurant-card').removeAttribute('class')
+        document.querySelector('restaurant-favourite').removeAttribute('class')
+      } catch (error) {
+        console.log('Attribute Class Removed')
+      }
+    }, 1000)
   }
 
   async renderPage () {
-    this._loading()
     try {
       const url = UrlParser.parseActiveUrlWithCombiner()
       const page = routes[url]

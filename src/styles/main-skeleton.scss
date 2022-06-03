@@ -1,0 +1,71 @@
+$main-skeleton-color: #e2e2e2;
+
+loading-skeleton {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	transition: 0.3s;
+}
+
+.skeleton-container {
+	margin: 1.5rem;
+	width: 340px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35);
+	transition: 1s;
+}
+
+.card-image.skeleton {
+    background: $main-skeleton-color;
+    height: 270px;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(#fff, 0), rgba(#fff, 0.5), rgba(#fff, 0));
+    background-size: 40px 100%; 
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    animation: shine 1s ease infinite;
+}
+
+.card-image.skeleton img {
+    display: none;
+}
+
+.card-image.skeleton p {
+    display: none;
+}
+
+.description.skeleton p {
+    background: $main-skeleton-color;
+    color: transparent;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(#fff, 0), rgba(#fff, 0.5), rgba(#fff, 0));
+    background-size: 40px 100%;
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    animation: shine 1s ease infinite;
+}
+
+.description.skeleton h4 {
+    background: $main-skeleton-color;
+    // color: transparent;
+    width: 50%;
+    height: 20px;
+    background-image: linear-gradient(90deg, rgba(#fff, 0), rgba(#fff, 0.5), rgba(#fff, 0));
+    background-size: 40px 100%;
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    animation: shine 1s ease infinite;
+}
+
+.description.skeleton a {
+    visibility: hidden;
+}
+
+.description.skeleton .yellow{
+    color: transparent;
+}
+
+@keyframes shine {
+	to {
+		background-position: right -40px top 0;
+	}
+}

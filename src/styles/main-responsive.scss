@@ -20,6 +20,10 @@ $main-text-color: #525e75;
 	.review-container {
 		max-width: 100%;
 	}
+
+	.image.skeleton-detail {
+		height: 80vh !important;
+	}
 }
 
 @media screen and (max-width: 716px) {
@@ -80,6 +84,10 @@ $main-text-color: #525e75;
 
 	.card {
 		margin: 1rem !important;
+	}
+
+	.image.skeleton-detail {
+		height: 60vh !important;
 	}
 }
 
