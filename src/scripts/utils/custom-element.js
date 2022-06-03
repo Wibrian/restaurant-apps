@@ -37,7 +37,7 @@ class HeroJumbotron extends HTMLElement {
       <div class="jumbotron">
         <picture>
           <source media="(max-width: 716px)" srcset="./images/heros/hero-image_2-small.jpg" />
-          <img class="hero-image" src="./images/heros/hero-image_2.jpg" alt="Gambar orang dengan hidangan makanan" />
+          <img class="hero-image" src="./images/heros/hero-image_2-large.jpg" alt="Gambar orang dengan hidangan makanan" />
         </picture>
         <h2 class="center-title" tabindex="0">Welcome to Hunger Apps</h2>
         <p class="center-subtitle">Bingung cari resotran? Coba cari disini..</p>
@@ -98,7 +98,10 @@ class ErrorMessage extends HTMLElement {
   render () {
     this.innerHTML = `
         <div class="jumbotron">
-            <img class="hero-image" src="./images/heros/hero-image_2.jpg" alt="Gambar orang dengan hidangan makanan" />
+            <picture>
+              <source media="(max-width: 716px)" srcset="./images/heros/hero-image_2-small.jpg" />
+              <img class="hero-image" src="./images/heros/hero-image_2-large.jpg" alt="Gambar orang dengan hidangan makanan" />
+            </picture>
             <h2 class="center-title" tabindex="0">Welcome to Hunger Apps</h2>
             <p class="center-subtitle">Bingung cari resotran? Coba cari disini..</p>
         </div>
